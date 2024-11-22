@@ -1,0 +1,28 @@
+@use "../utils/function" as func;
+@use "../utils/varibles" as bg_color;
+* {
+  margin: 0;
+  padding: 0;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+.container {
+  $mb_pading: 20;
+  max-width: func.container(1440, 100, $mb_pading);
+  padding: 0 $mb_pading + px;
+  margin: 0 auto;
+}
+html,
+body {
+  font-family: "Rubik", serif;
+  background-color: bg_color.$bg_yellow;
+}
+li {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}

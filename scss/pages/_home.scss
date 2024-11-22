@@ -1,0 +1,127 @@
+@use "../utils/varibles" as color;
+.nav_img {
+  img {
+    width: 100%;
+  }
+}
+
+main {
+  margin: 120px 0 80px;
+  .Aksiya {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .card_main {
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    .cards_main_1 {
+      background-color: color.$bg_white;
+      padding: 8px;
+      max-width: 272px;
+      margin: 0 auto;
+
+      .cards--body {
+        img {
+          width: 100%;
+          transition: 0.3s ease-in-out;
+          &:hover {
+            transform: scale(1.07);
+          }
+        }
+      }
+      .cards--footer {
+        padding: 8px;
+        .cards_one-trex {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          h1 {
+            font-family: Rubik;
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 27px;
+            text-align: left;
+            text-underline-position: from-font;
+            text-decoration-skip-ink: none;
+          }
+          p {
+            font-family: Rubik;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 24px;
+            text-align: left;
+            text-underline-position: from-font;
+            text-decoration-skip-ink: none;
+            color: #bfbfbf;
+          }
+        }
+        .cards_two-trex {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          h1 {
+            font-family: Rubik;
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 18px;
+            text-align: left;
+            text-underline-position: from-font;
+            text-decoration-skip-ink: none;
+          }
+          p {
+            font-family: Rubik;
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 18px;
+            text-align: left;
+            text-underline-position: from-font;
+            text-decoration-skip-ink: none;
+            color: #bfbfbf;
+          }
+        }
+        p {
+          font-family: Rubik;
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 24px;
+          text-align: left;
+          text-underline-position: from-font;
+          text-decoration-skip-ink: none;
+          padding-top: 8px;
+        }
+        img {
+          width: 100%;
+          padding: 8px 0;
+        }
+        button {
+          padding: 8px 80px;
+          border-radius: 4px;
+          font-family: Rubik;
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 24px;
+          text-align: center;
+          text-underline-position: from-font;
+          text-decoration-skip-ink: none;
+          color: #70c05b;
+          border: 1px solid #70c05b;
+          background-color: #ffffffff;
+          cursor: pointer;
+          transition: 0.3s;
+          &:hover {
+            background-color: #ff6633;
+            color: white;
+          }
+        }
+      }
+    }
+  }
+  .Aksiy1 {
+    margin-top: 40px;
+  }
+}
