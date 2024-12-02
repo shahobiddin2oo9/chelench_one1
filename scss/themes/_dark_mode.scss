@@ -1,0 +1,146 @@
+@use "../utils/varibles" as color;
+
+.dark-mode header {
+  background-color: rgb(12, 32, 88);
+  transition: 0.6s;
+  nav {
+    .nav_brend {
+      p {
+        color: white;
+      }
+      a {
+        .path_3 {
+          fill: #ffffff;
+        }
+        .path_4 {
+          fill: #ffffff;
+        }
+      }
+    }
+    .kotolog_input {
+      .nav-div {
+        .layk {
+          svg {
+            path {
+              fill: rgb(211, 209, 209);
+            }
+          }
+          p {
+            color: white;
+          }
+        }
+        .kub {
+          svg {
+            path {
+              fill: rgb(211, 209, 209);
+            }
+          }
+          p {
+            color: white;
+          }
+        }
+        .karzinka {
+          svg {
+            path {
+              fill: rgb(211, 209, 209);
+            }
+          }
+          p {
+            color: white;
+          }
+        }
+        .select_Img {
+          .select_Img_1 {
+            .a_select {
+              background-color: rgb(12, 32, 88);
+              p {
+                color: rgb(182, 182, 182);
+              }
+            }
+            .select_img_li {
+              &.active {
+                @media (max-width: 833px) {
+                  & {
+                    background-color: rgb(12, 32, 88);
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+body.dark-mode {
+  background-color: rgb(16, 43, 117);
+}
+.dark-mode main {
+  .header_img {
+    background-color: rgba(0, 69, 244, 0.247);
+    background-blend-mode: darken;
+    .header_img-img {
+      h1 {
+        color: rgb(255, 255, 255);
+      }
+    }
+  }
+  .Aksiya_h1_p {
+    h1 {
+      color: white;
+    }
+    p {
+      color: white;
+    }
+  }
+  .mains {
+    h1 {
+      color: white;
+    }
+  }
+  .magazine-location-bg {
+    h1 {
+      color: white;
+    }
+  }
+  .stati_text {
+    color: white;
+    p {
+      color: white;
+    }
+  }
+}
+.dark-mode footer {
+  background-image: none;
+  .footer_nav {
+    .footer_text {
+      a {
+        color: white;
+      }
+      a {
+        .path_3 {
+          fill: white;
+        }
+        .path_4 {
+          fill: white;
+        }
+      }
+    }
+    .footer_icons {
+      a {
+        color: white;
+      }
+    }
+  }
+  .footer_bootom_p {
+    p {
+      color: white;
+    }
+  }
+  & {
+    background-color: rgb(12, 32, 88);
+  }
+}
+.light-mode {
+  transition: 0.6s;
+}

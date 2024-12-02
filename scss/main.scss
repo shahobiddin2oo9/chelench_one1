@@ -3,4 +3,6 @@
 @use "./layout/header";
 @use "./layout/hamburger";
 @use "./pages/home.scss";
-@use "../pages/katolog.html";
+@use "./layout/footer";
+@use "./themes/dark_mode";
+@use "./pages/katolog";

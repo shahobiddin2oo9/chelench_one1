@@ -1,46 +1,505 @@
 @use "../utils/varibles" as color;
-.nav_img {
-  img {
-    width: 100%;
-  }
-}
-
 main {
-  margin: 120px 0 80px;
-  .Aksiya {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  .header_img {
+    background-image: url(../../images/header_img/vegetables_bg.svg);
+    background-color: rgba(255, 255, 255, 0.527);
+    margin: 0 0 80px;
+    background-blend-mode: color-dodge;
+    .header_img-img {
+      display: flex;
+      align-items: center;
+      img {
+        max-width: 303px;
+      }
+      h1 {
+        font-family: Rubik;
+        font-size: 48px;
+        font-weight: 700;
+        line-height: 72px;
+        text-align: center;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        color: #414141;
+      }
+      @media (max-width: 702px) {
+        & {
+          display: block;
+        }
+      }
+    }
   }
-  .card_main {
-    margin-top: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 20px;
-    .cards_main_1 {
-      background-color: color.$bg_white;
-      padding: 8px;
-      max-width: 272px;
-      margin: 0 auto;
-
-      .cards--body {
-        img {
-          width: 100%;
-          transition: 0.3s ease-in-out;
-          &:hover {
-            transform: scale(1.07);
+  .mains {
+    margin: 80px 0 120px;
+    .mains_Cards {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      @media (max-width: 1216px) {
+        & {
+          display: block;
+        }
+      }
+      .tow_Cards {
+        display: flex;
+        align-items: center;
+        margin-top: 40px;
+        justify-content: center;
+        .one_card {
+          display: flex;
+          align-items: center;
+          max-width: 584px;
+          background-color: #fcd5ba;
+          padding: 20px;
+          border-radius: 4px;
+          @media (max-width: 616px) {
+            & {
+              display: block;
+            }
+          }
+          .text_Cards {
+            img {
+              width: 100%;
+            }
+            h1 {
+              font-family: Rubik;
+              font-size: 24px;
+              font-weight: 700;
+              line-height: 36px;
+              text-align: left;
+              text-underline-position: from-font;
+              text-decoration-skip-ink: none;
+            }
+            p {
+              font-family: Rubik;
+              font-size: 16px;
+              font-weight: 400;
+              line-height: 24px;
+              text-align: left;
+              text-underline-position: from-font;
+              text-decoration-skip-ink: none;
+            }
           }
         }
       }
-      .cards--footer {
+    }
+  }
+  .Aksiya_h1_p {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    h1 {
+      font-family: Rubik;
+      font-size: 36px;
+      font-weight: 700;
+      line-height: 54px;
+      text-align: left;
+      text-underline-position: from-font;
+      text-decoration-skip-ink: none;
+    }
+    p {
+      font-family: Rubik;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+      text-align: center;
+      text-underline-position: from-font;
+      text-decoration-skip-ink: none;
+      color: #606060;
+    }
+  }
+  .H1_P {
+    margin-top: 40px;
+    @media (max-width: 472px) {
+      h1 {
+        font-size: 30px;
+      }
+    }
+  }
+  .Aksiya_cards {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 40px;
+    @media (max-width: 1139px) {
+      & {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, 272px);
+        gap: 30px;
+        justify-content: center;
+      }
+    }
+    .aksiya_card {
+      padding: 0 8px 8px;
+      max-width: 272px;
+      background-color: color.$bg_white;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: 0.3s;
+      img:nth-child(1) {
+        width: 100%;
+      }
+      img:nth-child(1):hover {
+        transition: 0.8s;
+        transform: scale(0.9);
+      }
+      &:hover {
+        box-shadow: 4px 8px 16px 0px #ff663333;
+      }
+      .aksiya_card-text-1 {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 6px;
+        h2 {
+          font-size: 18px;
+          font-weight: 700;
+          line-height: 27px;
+          text-align: left;
+          text-underline-position: from-font;
+          text-decoration-skip-ink: none;
+        }
+        h6 {
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 24px;
+          text-align: left;
+          text-underline-position: from-font;
+          text-decoration-skip-ink: none;
+          color: #606060;
+        }
+      }
+      .aksiya_card-text-2 {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 6px;
+        h5 {
+          font-size: 12px;
+          font-weight: 400;
+          line-height: 18px;
+          text-align: left;
+          text-underline-position: from-font;
+          text-decoration-skip-ink: none;
+          color: #bfbfbf;
+        }
+        h6 {
+          font-size: 12px;
+          font-weight: 400;
+          line-height: 18px;
+          text-align: left;
+          text-underline-position: from-font;
+          text-decoration-skip-ink: none;
+          color: #bfbfbf;
+        }
+      }
+      p {
+        font-family: Rubik;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+      }
+      button {
+        width: 100%;
         padding: 8px;
-        .cards_one-trex {
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        text-align: center;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        border: 1px solid #70c05b;
+        border-radius: 4px;
+        color: #70c05b;
+        background-color: color.$bg_white;
+        transition: 0.3s;
+        cursor: pointer;
+        &:hover {
+          background-color: #ff6633;
+          color: color.$bg_white;
+        }
+      }
+    }
+  }
+  .Aksiya_cards_1 {
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+    justify-content: space-between;
+    @media (max-width: 1139px) {
+      & {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, 272px);
+        gap: 30px;
+        justify-content: center;
+      }
+    }
+    .aksiya_card {
+      padding: 0 8px 8px;
+      max-width: 272px;
+      background-color: color.$bg_white;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: 0.3s;
+      img:nth-child(1) {
+        width: 100%;
+      }
+      img:nth-child(1):hover {
+        transition: 0.8s;
+        transform: scale(0.9);
+      }
+      &:hover {
+        box-shadow: 4px 8px 16px 0px #ff663333;
+      }
+      .aksiya_card-text-1 {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 6px;
+        h2 {
+          font-size: 18px;
+          font-weight: 700;
+          line-height: 27px;
+          text-align: left;
+          text-underline-position: from-font;
+          text-decoration-skip-ink: none;
+        }
+        h6 {
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 24px;
+          text-align: left;
+          text-underline-position: from-font;
+          text-decoration-skip-ink: none;
+          color: #606060;
+        }
+      }
+      .aksiya_card-text-2 {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 6px;
+        h5 {
+          font-size: 12px;
+          font-weight: 400;
+          line-height: 18px;
+          text-align: left;
+          text-underline-position: from-font;
+          text-decoration-skip-ink: none;
+          color: #bfbfbf;
+        }
+        h6 {
+          font-size: 12px;
+          font-weight: 400;
+          line-height: 18px;
+          text-align: left;
+          text-underline-position: from-font;
+          text-decoration-skip-ink: none;
+          color: #bfbfbf;
+        }
+      }
+      p {
+        font-family: Rubik;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+      }
+      button {
+        width: 100%;
+        padding: 8px;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        text-align: center;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        border: 1px solid #70c05b;
+        border-radius: 4px;
+        color: #70c05b;
+        background-color: color.$bg_white;
+        transition: 0.3s;
+        cursor: pointer;
+        &:hover {
+          background-color: #ff6633;
+          color: color.$bg_white;
+        }
+      }
+    }
+  }
+  .Aksiya_cards_2 {
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+    justify-content: space-between;
+    @media (max-width: 1139px) {
+      & {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, 272px);
+        gap: 30px;
+        justify-content: center;
+      }
+    }
+    .aksiya_card {
+      padding: 0 8px 8px;
+      max-width: 272px;
+      background-color: color.$bg_white;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: 0.3s;
+      img:nth-child(1) {
+        width: 100%;
+      }
+      img:nth-child(1):hover {
+        transition: 0.8s;
+        transform: scale(0.9);
+      }
+      &:hover {
+        box-shadow: 4px 8px 16px 0px #ff663333;
+      }
+      .aksiya_card-text-1 {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 6px;
+        h2 {
+          font-size: 18px;
+          font-weight: 700;
+          line-height: 27px;
+          text-align: left;
+          text-underline-position: from-font;
+          text-decoration-skip-ink: none;
+        }
+        h6 {
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 24px;
+          text-align: left;
+          text-underline-position: from-font;
+          text-decoration-skip-ink: none;
+          color: #606060;
+        }
+      }
+      .aksiya_card-text-2 {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 6px;
+        h5 {
+          font-size: 12px;
+          font-weight: 400;
+          line-height: 18px;
+          text-align: left;
+          text-underline-position: from-font;
+          text-decoration-skip-ink: none;
+          color: #bfbfbf;
+        }
+        h6 {
+          font-size: 12px;
+          font-weight: 400;
+          line-height: 18px;
+          text-align: left;
+          text-underline-position: from-font;
+          text-decoration-skip-ink: none;
+          color: #bfbfbf;
+        }
+      }
+      p {
+        font-family: Rubik;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+      }
+      button {
+        width: 100%;
+        padding: 8px;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        text-align: center;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        border: 1px solid #70c05b;
+        border-radius: 4px;
+        color: #70c05b;
+        background-color: color.$bg_white;
+        transition: 0.3s;
+        cursor: pointer;
+        &:hover {
+          background-color: #ff6633;
+          color: color.$bg_white;
+        }
+      }
+    }
+  }
+  .Stati_cards {
+    margin-top: 120px;
+    .stati_text {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 40px;
+      h1 {
+        font-family: Rubik;
+        font-size: 36px;
+        font-weight: 700;
+        line-height: 54px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+      }
+      p {
+        font-family: Rubik;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        text-align: center;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        color: #606060;
+      }
+    }
+    .threeCards {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      @media (max-width: 1172px) {
+        flex-wrap: wrap;
+        gap: 40px;
+      }
+      .threeCards_card {
+        max-width: 376px;
+        padding: 0 0 10px;
+        background-color: color.$bg_white;
+        transition: 0.2s;
+        margin: 0 auto;
+        cursor: pointer;
+        &:hover {
+          box-shadow: 4px 8px 16px 0px #ff663333;
+        }
+        img {
+          width: 100%;
+          margin-bottom: 10px;
+        }
+        .threeCards_card-text {
+          margin: 0 10px;
           h1 {
+            font-family: Rubik;
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 18px;
+            text-align: left;
+            text-underline-position: from-font;
+            text-decoration-skip-ink: none;
+          }
+          b {
             font-family: Rubik;
             font-size: 18px;
             font-weight: 700;
@@ -48,6 +507,7 @@ main {
             text-align: left;
             text-underline-position: from-font;
             text-decoration-skip-ink: none;
+            margin-bottom: 10px;
           }
           p {
             font-family: Rubik;
@@ -57,71 +517,99 @@ main {
             text-align: left;
             text-underline-position: from-font;
             text-decoration-skip-ink: none;
-            color: #bfbfbf;
+            margin-bottom: 10px;
           }
-        }
-        .cards_two-trex {
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-          h1 {
+          button {
+            padding: 8px 24px;
+            border: none;
+            border-radius: 4px;
+            background-color: #e5ffde;
             font-family: Rubik;
-            font-size: 12px;
+            font-size: 16px;
             font-weight: 400;
-            line-height: 18px;
-            text-align: left;
+            line-height: 24px;
+            text-align: center;
             text-underline-position: from-font;
             text-decoration-skip-ink: none;
-          }
-          p {
-            font-family: Rubik;
-            font-size: 12px;
-            font-weight: 400;
-            line-height: 18px;
-            text-align: left;
-            text-underline-position: from-font;
-            text-decoration-skip-ink: none;
-            color: #bfbfbf;
-          }
-        }
-        p {
-          font-family: Rubik;
-          font-size: 16px;
-          font-weight: 400;
-          line-height: 24px;
-          text-align: left;
-          text-underline-position: from-font;
-          text-decoration-skip-ink: none;
-          padding-top: 8px;
-        }
-        img {
-          width: 100%;
-          padding: 8px 0;
-        }
-        button {
-          padding: 8px 80px;
-          border-radius: 4px;
-          font-family: Rubik;
-          font-size: 14px;
-          font-weight: 400;
-          line-height: 24px;
-          text-align: center;
-          text-underline-position: from-font;
-          text-decoration-skip-ink: none;
-          color: #70c05b;
-          border: 1px solid #70c05b;
-          background-color: #ffffffff;
-          cursor: pointer;
-          transition: 0.3s;
-          &:hover {
-            background-color: #ff6633;
-            color: white;
+            color: #70c05b;
+            cursor: pointer;
+            &:active {
+              background-color: #70c05b;
+              color: white;
+            }
           }
         }
       }
     }
   }
-  .Aksiy1 {
-    margin-top: 40px;
+  // magazine-location
+  .magazine-location-bg {
+    h1 {
+      color: black;
+      font-family: Rubik;
+      font-size: 30px;
+      font-weight: 700;
+      line-height: 36px;
+      text-align: left;
+      text-underline-position: from-font;
+      text-decoration-skip-ink: none;
+      margin-top: 50px;
+      @media (max-width: 441px) {
+        text-align: center;
+      }
+    }
+    .magazine-location-row {
+      // display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+    }
+    .location-buttons {
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      gap: 15px;
+      margin-top: 50px;
+      @media (max-width: 370px) {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      button {
+        width: Fixed (91px) px;
+        height: Fixed (32px) px;
+        padding: 8px;
+        gap: 8px;
+        border-radius: 4px;
+        background: gainsboro;
+        color: white;
+        font-family: Rubik;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 18px;
+        text-align: center;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        border: none;
+        &:active {
+          background: #70c05b;
+          color: white;
+        }
+      }
+    }
+    .location-map {
+      display: flex;
+      justify-content: center;
+      border-radius: 5px;
+      margin-top: 24px;
+      iframe {
+        object-fit: cover;
+        @media (max-width: 752px) {
+          width: 500px;
+        }
+        @media (max-width: 520px) {
+          width: 300px;
+        }
+      }
+    }
   }
 }

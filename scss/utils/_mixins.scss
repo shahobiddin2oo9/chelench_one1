@@ -1,0 +1,25 @@
+@mixin dlf($display, $aligin, $juct, $gap) {
+  display: $display;
+  align-items: $aligin;
+  justify-content: $juct;
+  gap: $gap + px;
+}
+@mixin size($size, $border-radus, $border, $padding, $margin, $textalig) {
+  font-size: $size + px;
+  border-radius: $border-radus + px;
+  border: $border;
+  padding: $padding;
+  margin: $margin;
+  text-align: $textalig;
+}
+@mixin px($width, $height) {
+  width: $width + px;
+  height: $height + px;
+}
+@mixin posetion($relative, $left, $right, $top, $bottom) {
+  position: $relative;
+  left: $left + px;
+  right: $right + px;
+  top: $top + px;
+  bottom: $bottom + px;
+}

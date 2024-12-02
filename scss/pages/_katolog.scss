@@ -1,0 +1,11 @@
+@use "../utils/varibles" as color;
+@use "../utils/mixins" as flex;
+
+main {
+  .serch_cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 50px;
+  }
+}

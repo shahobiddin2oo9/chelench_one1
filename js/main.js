@@ -1,27 +1,81 @@
-let cardMain = document.querySelector(".card_main");
+// Aksiya _1
+let cardMain = document.querySelector(".Aksiya_cards");
 
-function getCards({ name, description, images, images1 }) {
+function getCards({ name, price, description, images, images1 }) {
   return `
-  <div class="cards_main_1">
-    <div class="cards--body">
-      <img src=${images} />
-    </div>
-    <div class="cards--footer">
-      <div class="cards_one-trex">
-        <h1>44,50</h1>
-        <p>50,50</p>
+    <div class="aksiya_card">
+      <img src="${images[0]}" alt="${description}" />
+      <div class="aksiya_card-text-1">
+        <h2>${price}</h2>
+        <h6>50,50 ₽</h6> <!-- Ushbu qator statik qoldirildi -->
       </div>
-      <div class="cards_two-trex">
-        <h1>С картой</h1>
-        <p>Обычная</p>
+      <div class="aksiya_card-text-2">
+        <h5>С картой</h5>
+        <h6>Обычная</h6>
       </div>
       <p>${description}</p>
-      <img src=${images1} />
-      <button>В корзину</button>
+      <img src="${images1[0]}" alt="Rating" />
+      <button onClick="getCartTotal(${id})">В корзину</button>
     </div>
-  </div>`;
+  `;
 }
 
-products.forEach((products) => {
-  cardMain.innerHTML += getCards(products);
+product.forEach((prdct) => {
+  cardMain.innerHTML += getCards(prdct);
 });
+
+// Aksiya _2
+let cardMain_1 = document.querySelector(".Aksiya_cards_1 ");
+
+function getCards({ name, price, description, images, images1 }) {
+  return `
+    <div class="aksiya_card">
+      <img src="${images}" alt="${description}" />
+      <div class="aksiya_card-text-1">
+        <h2>${price}</h2>
+        <h6>50,50 ₽</h6> <!-- Ushbu qator statik qoldirildi -->
+      </div>
+      <div class="aksiya_card-text-2">
+        <h5>С картой</h5>
+        <h6>Обычная</h6>
+      </div>
+      <p>${description}</p>
+      <img src="${images1}" alt="Rating" />
+      <button >В корзину</button>
+    </div>
+  `;
+}
+
+product2.forEach((prdct) => {
+  cardMain_1.innerHTML += getCards(prdct);
+});
+
+// Aksiya_3
+let cardMain_2 = document.querySelector(".Aksiya_cards_2 ");
+
+function getCards({ name, price, description, images, images1 }) {
+  return `
+    <div class="aksiya_card">
+      <img src="${images}" alt="${description}" />
+      <div class="aksiya_card-text-1">
+        <h2>${price}</h2>
+        <h6>50,50 ₽</h6> <!-- Ushbu qator statik qoldirildi -->
+      </div>
+      <div class="aksiya_card-text-2">
+        <h5>С картой</h5>
+        <h6>Обычная</h6>
+      </div>
+      <p>${description}</p>
+      <img src="${images1}" alt="Rating" />
+      <button>В корзину</button>
+    </div>
+  `;
+}
+
+product3.forEach((prdct) => {
+  cardMain_2.innerHTML += getCards(prdct);
+});
+
+function getCartTotal(id) {
+  console.log(id);
+}

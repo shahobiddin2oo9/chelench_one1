@@ -1,19 +1,54 @@
 @use "../utils/varibles" as color;
+@use "../utils/mixins" as flex;
+
 header {
-  position: sticky;
-  background-color: #fbf8ecc1;
+  background-color: #fbf8ec;
   margin-bottom: 10px;
+  position: sticky;
   top: 0;
+  z-index: 1;
+
+  #backToTopBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+
+  #backToTopBtn:hover {
+    background-color: #0056b3;
+  }
+
+  #backToTopBtn.show {
+    display: block;
+  }
   nav {
-    display: flex;
-    align-items: center;
+    @include flex.dlf(flex, center, space-between, 0);
     padding: 20px 0;
-    justify-content: space-between;
     .nav_brend {
-      display: flex;
-      align-items: center;
-      gap: 11px;
+      @include flex.dlf(flex, center, center, 11);
       font-weight: 900;
+      a {
+        .path_3 {
+          fill: #414141;
+        }
+        .path_4 {
+          fill: #414141;
+        }
+      }
+      p {
+        @include flex.dlf(flex, center, center, 11);
+        font-weight: 900;
+      }
     }
     @media (max-width: 1101px) {
       .nav_brend p {
@@ -21,44 +56,120 @@ header {
       }
     }
     .kotolog_input {
-      display: flex;
-      align-items: center;
+      @include flex.dlf(flex, center, center, 0);
       gap: 40px;
       .kotolog_input_1 {
-        display: flex;
-        align-items: center;
-        gap: 16px;
+        @include flex.dlf(flex, center, center, 16);
         .button_div {
-          padding: 8px !important;
+          display: block;
+          background: color.$btn_green;
+          padding: 8px;
+          cursor: pointer;
           display: flex;
           align-items: center;
-          gap: 16px;
-          background: color.$btn_green;
+          border-radius: 4px;
+          gap: 8px;
+          font-weight: 400;
+          line-height: 24px;
+          text-decoration-skip-ink: none;
           border: none;
-          border-radius: 5px;
-          cursor: pointer;
+          position: relative;
           img {
             width: 24px;
             border-radius: 4px;
           }
           a {
-            font-family: Rubik;
-            font-size: 16px;
-            font-weight: 400;
-            line-height: 24px;
-            text-align: center;
-            text-decoration-skip-ink: none;
             color: color.$bg_white;
+            font-size: 16px;
+            @media (max-width: 993px) {
+              span {
+                display: none;
+              }
+            }
           }
-        }
-        @media (max-width: 978px) {
-          .button_div a {
+          .button_div_one {
             display: none;
+            transition: 1;
+            &.active {
+              display: block;
+              font-weight: 900;
+              border-radius: 15px;
+              border: 1px solid orange;
+              justify-content: center;
+              background-color: rgb(227, 241, 228);
+              margin-top: 81px;
+              margin-left: 70px;
+              flex-direction: column;
+              position: absolute;
+              top: -40px;
+            }
+            ul {
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              gap: 126px;
+              padding: 40px 166px;
+              left: -320px;
+              position: absolute;
+              flex-wrap: nowrap;
+              top: 20px;
+              max-width: 1230px;
+              background-color: color.$bg_white;
+
+              @media (max-width: 1304px) {
+                & {
+                  gap: 106px;
+                }
+              }
+              @media (max-width: 1178px) {
+                & {
+                  left: -140px;
+                  gap: 66px;
+                  padding: 40px 100px;
+                }
+              }
+              @media (max-width: 965px) {
+                & {
+                  flex-direction: column;
+                  gap: 16px;
+                  padding: 40px 30px;
+                }
+              }
+
+              @media (max-width: 882px) {
+                & {
+                  left: -60px;
+                }
+              }
+              @media (max-width: 507px) {
+                & {
+                  left: -170px;
+                  top: 0;
+                }
+              }
+              li {
+                display: flex;
+                flex-direction: column;
+                gap: 14px;
+                a {
+                  color: black;
+                  font-family: Rubik;
+                  font-size: 16px;
+                  font-weight: 700;
+                  line-height: 24px;
+                  text-align: left;
+                  &:hover {
+                    text-decoration: revert;
+                    color: red;
+                  }
+                }
+              }
+            }
           }
         }
+
         .input {
-          display: flex;
-          align-items: center;
+          @include flex.dlf(flex, center, none, 0);
           position: relative;
           input {
             padding: 10px !important;
@@ -67,31 +178,31 @@ header {
             border: 1px solid color.$btn_green;
             border-radius: 4px;
           }
-          @media (max-width: 913px) {
+          @media (max-width: 949px) {
             input {
               transition: 1s;
               width: 304px;
             }
           }
-          @media (max-width: 500px) {
+          @media (max-width: 524px) {
             input {
               max-width: 250px;
               transition: 1s;
             }
           }
-          @media (max-width: 449px) {
+          @media (max-width: 470px) {
             input {
               transition: 1s;
               max-width: 200px;
             }
           }
-          @media (max-width: 385px) {
+          @media (max-width: 418px) {
             input {
               transition: 1s;
               max-width: 170px;
             }
           }
-          @media (max-width: 355px) {
+          @media (max-width: 389px) {
             input {
               transition: 1s;
               max-width: 130px;
@@ -123,75 +234,84 @@ header {
           width: 100%;
         }
       }
-
-      @media (max-width: 816px) {
+      @media (max-width: 879px) {
         .nav-div_btn {
           display: block;
-          border: none;
+          border: 1px solid black;
+          border-radius: 4px;
           background-color: color.$bg_yellow;
         }
       }
       .nav-div {
         display: flex;
         align-items: center;
-        gap: 50px;
+        gap: 24px;
         .layk {
-          display: block;
-          align-items: center;
+          @include flex.dlf(block, center, none, 0);
           flex-direction: column;
-          img {
+          svg {
             display: flex;
             margin: 0 auto;
+            path {
+              fill: #414141;
+            }
           }
           p {
-            font-family: Rubik;
-            font-size: 12px;
+            @include flex.size(12, 0, none, 8px, 0, center);
             font-weight: 400;
             line-height: 18px;
-            text-align: center;
             text-underline-position: from-font;
             text-decoration-skip-ink: none;
           }
         }
         .kub {
-          display: block;
-          align-items: center;
+          @include flex.dlf(block, center, none, 0);
           flex-direction: column;
-          img {
+          svg {
             display: flex;
             margin: 0 auto;
           }
           p {
-            font-family: Rubik;
-            font-size: 12px;
+            @include flex.size(12, 0, none, 8px, 0, center);
             font-weight: 400;
             line-height: 18px;
-            text-align: center;
             text-underline-position: from-font;
             text-decoration-skip-ink: none;
           }
         }
         .karzinka {
-          display: block;
-          align-items: center;
+          @include flex.dlf(block, center, none, 0);
           flex-direction: column;
-          img {
+          position: relative;
+          margin-top: 0px;
+          cursor: pointer;
+          .cartCount {
+            position: absolute;
+            top: 5px;
+            z-index: 9999;
+            right: 13px;
+            font-family: cursive;
+            font-size: 14px;
+            color: white;
+            padding: 0px 3px;
+            border-radius: 2px;
+            background-color: #6b00f3;
+          }
+          svg {
             display: flex;
-            margin: 0 auto;
+            align-items: center;
           }
           p {
-            font-family: Rubik;
-            font-size: 12px;
+            @include flex.size(12, 0, none, 8px, 0, center);
             font-weight: 400;
             line-height: 18px;
-            text-align: center;
+            margin-left: -10px;
             text-underline-position: from-font;
             text-decoration-skip-ink: none;
           }
         }
         .select_Img {
-          display: flex;
-          align-items: center;
+          @include flex.dlf(flex, center, none, 0);
           flex-direction: column;
           gap: 10px;
           .select_Img_1 {
@@ -199,45 +319,83 @@ header {
             gap: 10px;
           }
           .a_select {
-            display: flex;
-            align-items: center;
-            border: none;
+            @include flex.dlf(flex, center, none, 10);
+            @include flex.size(0px, 0, none, 8px, 0, center);
             background-color: color.$bg_yellow;
-            gap: 10px;
             cursor: pointer;
             width: 100px;
             border-radius: 30px;
+            p {
+              color: rgb(182, 182, 182);
+              font-size: 14px;
+            }
           }
-
           .select_img_li {
-            display: none;
+            @include flex.dlf(none, center, none, 0);
+            @include flex.size(0px, 0, 1px solid black, 10px, 0, none);
             background-color: rgba(183, 113, 113, 0.306);
-            padding: 10px;
-            letter-spacing: 2px;
-            border: 1px solid black;
-            border-radius: 10px;
+            letter-spacing: 1px;
+            position: relative;
             a {
               color: rgb(0, 0, 0);
               font-weight: 900;
-              display: flex;
-              flex-direction: column;
+              display: block;
+            }
+            #togel {
+              @include flex.dlf(black, center, none, 0);
+              @include flex.size(0px, 20, none, 10px, 0, 5px 0 0 0);
+              @include flex.px(45, 28);
+              position: relative;
+              background-color: #adaaaa;
+              transition: 0.5s;
+              box-shadow: inset 0 8px 60px rgba(0, 0, 0, 0.1),
+                inset 0 8px 8px rgba(0, 0, 0, 0.1) inset 0 -4px 4px rgba(0, 0, 0, 0.1);
+              .indicator {
+                position: absolute;
+                top: 1.3px;
+                left: 1.5px;
+                margin: 0 auto;
+                width: 20px;
+                height: 20px;
+                border-radius: 50%;
+                transform: scale(0.9);
+                box-shadow: 0 8px 40px rgba(0, 0, 0, 0.5),
+                  inset 0 4px 4px rgba(255, 255, 255, 0.2),
+                  inset 0 -4px -4px rgba(255, 255, 255, 0.2);
+                transition: 0.5s;
+                cursor: pointer;
+                .sun {
+                  display: none;
+                }
+              }
+              &.active .indicator {
+                left: 25px;
+                .sun {
+                  display: block;
+                  margin-top: 2.9px;
+                  margin-left: -3px;
+                  width: 20px;
+                }
+                .moon {
+                  display: none;
+                }
+              }
             }
             &.active {
-              display: block;
+              @include flex.dlf(flex, center, center, 0);
               font-weight: 900;
               transition: 1s;
               border-radius: 15px;
               border: 1px solid orange;
-              display: flex;
               justify-content: center;
-              background-color: yellow;
-              margin-top: 80px;
-              display: flex !important;
+              background-color: rgb(227, 241, 228);
+              margin-top: 81px;
+              margin-left: 70px;
               flex-direction: column;
               position: absolute;
-              top: -20px;
+              top: -40px;
             }
-            @media (max-width: 816px) {
+            @media (max-width: 879px) {
               &.active {
                 display: block;
                 font-weight: 900;
@@ -246,13 +404,13 @@ header {
                 border: 1px solid orange;
                 display: flex;
                 justify-content: center;
-                background-color: yellow;
+                background-color: #e3f1e4;
                 margin-top: 80px;
                 display: flex !important;
                 flex-direction: column;
                 position: absolute;
-                top: 100px;
-                right: 24px;
+                top: 150px;
+                right: 14px;
               }
             }
             .text-content {
@@ -279,7 +437,7 @@ header {
           right: 10px;
         }
       }
-      @media (max-width: 816px) {
+      @media (max-width: 879px) {
         .nav-div {
           display: none;
         }
@@ -295,6 +453,30 @@ header {
       .kotolog_input {
         gap: 10px;
         transition: 1s;
+      }
+    }
+  }
+  .header_img {
+    background-image: url(../../images/header_img/vegetables_bg.svg);
+    background-color: rgba(255, 255, 255, 0.527);
+    background-blend-mode: color-dodge;
+    .header_img-img {
+      display: flex;
+      align-items: center;
+      h1 {
+        font-family: Rubik;
+        font-size: 48px;
+        font-weight: 700;
+        line-height: 72px;
+        text-align: center;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        color: #414141;
+      }
+      @media (max-width: 702px) {
+        & {
+          display: block;
+        }
       }
     }
   }
@@ -321,4 +503,24 @@ header {
       transition: 1s;
     }
   }
+}
+.loading_ {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  img {
+    width: 40%;
+    object-fit: cover;
+  }
+}
+.loading-none {
+  opacity: 0;
+  z-index: -99999;
 }
